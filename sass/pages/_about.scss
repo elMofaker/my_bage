@@ -1,11 +1,15 @@
 
+
+
 .about {
+    
     .row {
         align-items: center;
         text-align: initial;
         
         img {
             width: 75%;
+            height: 28rem;
         }
     
         h2 {
@@ -16,9 +20,6 @@
         p {
     
             font-size: 1.1rem;
-            @media (max-width:565px) {
-                font-size: .5rem;
-            }
         }
     }
 

@@ -1,5 +1,6 @@
+@use '../helpers/variable';
+
 .btn-cssbuttons {
-    --btn-color: #275efe;
     position: relative;
     padding: 16px 32px;
     font-family: Roboto, sans-serif;
@@ -14,6 +15,8 @@
     cursor: pointer;
     filter: drop-shadow(0 2px 8px rgba(39, 94, 254, 0.32));
     transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    width: 65%;
+    border-radius: 24px;
 }
 
 .btn-cssbuttons::before {
@@ -24,7 +27,7 @@
     z-index: -1;
     width: 100%;
     height: 100%;
-    background: var(--btn-color);
+    background: $color-blue;
     border-radius: 24px;
     transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
@@ -70,8 +73,13 @@
     vertical-align: middle;
     transform: translateY(55px);
     transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+    text-decoration: none;
 }
 
+.btn-cssbuttons ul li .icon{
+    color: white;
+
+}
 .btn-cssbuttons ul li a:hover {
     opacity: 0.5;
 }
@@ -89,6 +97,7 @@
     transform: translateY(0);
 }
 
+
 .btn-cssbuttons:hover ul li:nth-child(1) a {
     transition-delay: 0.15s;
 }
@@ -100,3 +109,8 @@
 .btn-cssbuttons:hover ul li:nth-child(3) a {
     transition-delay: 0.25s;
 }
+
+
+
+
+

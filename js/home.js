@@ -1,4 +1,4 @@
-// const logo = document.querySelectorAll("#logo path");
+// const logo = document.querySelectorAll("#svg-about path");
 
 // for (let i = 0; i < logo.length; i++) {
 //     console.log(`Letter ${i} length is ${logo[i].getTotalLength()}`);
@@ -8,14 +8,38 @@ let countersActivated = false;
 
 function runCodeOnScroll() {
   const sectionTop = document.getElementById("skills").offsetTop;
-  const triggerOffset = 150;
+  const triggerOffset = 200;
   const targetPosition = sectionTop - triggerOffset;
-  
+
   // Check if the page has been scrolled to the target position and counters are not activated
   if (window.scrollY >= targetPosition && !countersActivated) {
     countersActivated = true; // Set counters activated to true to prevent multiple runs
 
+    // html
+    let count6 = 0;
+    const interval6 = setInterval(() => {
+      count6++;
+      document.getElementById("number-html").textContent = count6 + "%";
+      const htmlElements = document.getElementsByClassName("bar-html");
+      htmlElements[0].style.width = count6 + "%";
+      if (count6 === 99) {
+        clearInterval(interval6);
+      }
+    }, 20);
 
+    // css
+    let count5 = 0;
+    const interval5 = setInterval(() => {
+      count5++;
+      document.getElementById("number-css").textContent = count5 + "%";
+      const cssElements = document.getElementsByClassName("bar-css");
+      cssElements[0].style.width = count5 + "%";
+      if (count5 === 99) {
+        clearInterval(interval5);
+      }
+    }, 22);
+
+    // sass
     let count1 = 0;
     const interval1 = setInterval(() => {
       count1++;
@@ -26,19 +50,9 @@ function runCodeOnScroll() {
       if (count1 === 97) {
         clearInterval(interval1);
       }
-    }, 30);
+    }, 24);
 
-    let count2 = 0;
-    const interval2 = setInterval(() => {
-      count2++;
-      document.getElementById("number-ui").textContent = count2 + "%";
-      const uiElements = document.getElementsByClassName("bar-ui");
-      uiElements[0].style.width = count2 + "%";
-      if (count2 === 90) {
-        clearInterval(interval2);
-      }
-    }, 30);
-
+    // bootstrap
     let count3 = 0;
     const interval3 = setInterval(() => {
       count3++;
@@ -46,11 +60,12 @@ function runCodeOnScroll() {
       const bootstrapElements =
         document.getElementsByClassName("bar-bootstrap");
       bootstrapElements[0].style.width = count3 + "%";
-      if (count3 === 97) {
+      if (count3 === 98) {
         clearInterval(interval3);
       }
-    }, 30);
+    }, 26);
 
+    // js
     let count4 = 0;
     const interval4 = setInterval(() => {
       count4++;
@@ -60,27 +75,17 @@ function runCodeOnScroll() {
       if (count4 === 90) {
         clearInterval(interval4);
       }
-    }, 30);
+    }, 28);
 
-    let count5 = 0;
-    const interval5 = setInterval(() => {
-      count5++;
-      document.getElementById("number-css").textContent = count5 + "%";
-      const cssElements = document.getElementsByClassName("bar-css");
-      cssElements[0].style.width = count5 + "%";
-      if (count5 === 99) {
-        clearInterval(interval5);
-      }
-    }, 30);
-
-    let count6 = 0;
-    const interval6 = setInterval(() => {
-      count6++;
-      document.getElementById("number-html").textContent = count6 + "%";
-      const htmlElements = document.getElementsByClassName("bar-html");
-      htmlElements[0].style.width = count6 + "%";
-      if (count6 === 99) {
-        clearInterval(interval6);
+    // ui
+    let count2 = 0;
+    const interval2 = setInterval(() => {
+      count2++;
+      document.getElementById("number-ui").textContent = count2 + "%";
+      const uiElements = document.getElementsByClassName("bar-ui");
+      uiElements[0].style.width = count2 + "%";
+      if (count2 === 90) {
+        clearInterval(interval2);
       }
     }, 30);
   }
@@ -93,7 +98,3 @@ runCodeOnScroll();
 window.addEventListener("scroll", () => {
   runCodeOnScroll();
 });
-
-
-
-

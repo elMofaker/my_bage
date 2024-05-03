@@ -14,6 +14,8 @@
   cursor: pointer;
   filter: drop-shadow(0 2px 8px rgba(39, 94, 254, 0.32));
   transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  width: 65%;
+  border-radius: 24px;
 }
 
 .btn-cssbuttons::before {
@@ -70,6 +72,11 @@
   vertical-align: middle;
   transform: translateY(55px);
   transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  text-decoration: none;
+}
+
+.btn-cssbuttons ul li .icon {
+  color: white;
 }
 
 .btn-cssbuttons ul li a:hover {
@@ -136,6 +143,19 @@ nav {
     display: none;
   }
 }
+nav .icon-toggler {
+  border: none;
+  display: grid;
+  grid-template-rows: repeat(3, 15px);
+}
+nav .icon-toggler:focus {
+  box-shadow: none;
+}
+nav .icon-toggler span {
+  width: 50px;
+  height: 0.1px;
+  border: 0.1px solid rgb(0, 0, 0);
+}
 nav .activelink {
   position: absolute;
   top: 0;
@@ -184,6 +204,7 @@ nav svg path:nth-child(7) {
 }
 
 footer {
+  padding: 4rem 0 9rem 0;
   color: #fff;
   text-align: center;
   background-color: hsl(224, 56%, 12%);
@@ -313,11 +334,6 @@ footer svg path:nth-child(7) {
 }
 .about .row p {
   font-size: 1.1rem;
-}
-@media (max-width: 565px) {
-  .about .row p {
-    font-size: 0.5rem;
-  }
 }
 
 .skills {

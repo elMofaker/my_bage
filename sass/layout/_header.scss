@@ -1,5 +1,6 @@
-@use '../helpers/anim' as * ; 
+@use '../helpers/anim' as *;
 @use '../helpers/variable' as *;
+@use '../components/buttons' as *;
 
 
 nav {
@@ -7,12 +8,37 @@ nav {
     width: 100%;
     background: white;
     border-bottom: 1px solid $color-black;
-    .icon{
+
+    .icon {
         @media (min-width:992px) {
             display: none;
         }
     }
-    .activelink{
+
+    .icon-toggler {
+        border: none;
+        display: grid;
+        grid-template-rows: repeat(3, 15px);
+        &:focus {
+            box-shadow: none;
+        }
+        span{
+            width: 50px;
+            height: .1px;
+            border: .1px solid rgb(0, 0, 0);
+        }
+        span:nth-child(1) {
+
+        }
+        span:nth-child(2) {
+
+        }
+        span:nth-child(3) {
+
+        }
+    }
+
+    .activelink {
         position: absolute;
         top: 0;
         left: 0;
@@ -23,37 +49,44 @@ nav {
         color: rgb(28, 35, 224);
         animation: navborder 2s forwards;
     }
+
     svg {
         path:nth-child(1) {
             stroke-dasharray: 71;
             stroke-dashoffset: 71;
             animation: line-anim 2s ease forwards .3ms;
         }
+
         path:nth-child(2) {
             stroke-dasharray: 68;
             stroke-dashoffset: 68;
             animation: line-anim 2s ease forwards .6ms;
         }
+
         path:nth-child(3) {
             stroke-dasharray: 67;
             stroke-dashoffset: 67;
-            animation: line-anim 2s ease forwards .9ms; 
+            animation: line-anim 2s ease forwards .9ms;
         }
+
         path:nth-child(4) {
             stroke-dasharray: 67;
             stroke-dashoffset: 67;
             animation: line-anim 2s ease forwards 1.1ms;
         }
+
         path:nth-child(5) {
             stroke-dasharray: 66;
             stroke-dashoffset: 66;
             animation: line-anim 2s ease forwards 1.4ms;
         }
+
         path:nth-child(6) {
             stroke-dasharray: 78;
             stroke-dashoffset: 78;
             animation: line-anim 2s ease forwards 1.7ms;
         }
+
         path:nth-child(7) {
             stroke-dasharray: 87;
             stroke-dashoffset: 87;
