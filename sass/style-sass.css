@@ -136,7 +136,7 @@ nav {
   z-index: 1;
   width: 100%;
   background: white;
-  border-bottom: 1px solid hsl(224, 56%, 12%);
+  box-shadow: 0 0 6px -5px black;
 }
 nav .icon-bargar {
   border: none;
@@ -423,7 +423,7 @@ footer svg path:nth-child(7) {
 }
 .work .container .row .col {
   padding: 0;
-  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.386);
+  box-shadow: 0px 0 20px -8px rgba(14, 36, 49, 0.386);
   border-radius: 0.5rem;
   overflow: hidden;
 }
