@@ -1,0 +1,45 @@
+@use '../helpers/variable' as *;
+@use '../helpers/anim' as *;
+
+footer{
+    color: #fff;
+    text-align: center;
+    background-color:  $color-black;
+    svg {
+        path:nth-child(1) {
+            stroke-dasharray: 106;
+            stroke-dashoffset: 106;
+            animation: line-anim 2s ease forwards .3ms;
+        }
+        path:nth-child(2) {
+            stroke-dasharray: 102;
+            stroke-dashoffset: 102;
+            animation: line-anim 2s ease forwards .6ms;
+        }
+        path:nth-child(3) {
+            stroke-dasharray: 98;
+            stroke-dashoffset: 98;
+            animation: line-anim 2s ease forwards .9ms; 
+        }
+        path:nth-child(4) {
+            stroke-dasharray: 98;
+            stroke-dashoffset: 98;
+            animation: line-anim 2s ease forwards 1.1ms;
+        }
+        path:nth-child(5) {
+            stroke-dasharray: 99;
+            stroke-dashoffset: 99;
+            animation: line-anim 2s ease forwards 1.4ms;
+        }
+        path:nth-child(6) {
+            stroke-dasharray: 116;
+            stroke-dashoffset: 116;
+            animation: line-anim 2s ease forwards 1.7ms;
+        }
+        path:nth-child(7) {
+            stroke-dasharray: 129;
+            stroke-dashoffset: 129;
+            animation: line-anim 2s ease forwards 2ms;
+        }
+    }
+}

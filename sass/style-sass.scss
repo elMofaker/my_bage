@@ -1,0 +1,19 @@
+// components
+@use '../sass/components/buttons';
+// helpers
+@use '../sass/helpers/variable';
+@use '../sass/helpers/anim';
+// layout
+@use '../sass/layout/header';
+@use '../sass/layout/footer';
+// pages
+@use '../sass/pages/home';
+@use '../sass/pages/about';
+@use '../sass/pages/skills';
+@use '../sass/pages/work';
+
+
+body{
+    font-family: "Poppins", sans-serif;;
+    
+}

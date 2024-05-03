@@ -1,0 +1,25 @@
+
+.about {
+    .row {
+        align-items: center;
+        text-align: initial;
+        
+        img {
+            width: 75%;
+        }
+    
+        h2 {
+            font-weight: bold;
+            font-size: 2rem;
+        }
+    
+        p {
+    
+            font-size: 1.1rem;
+            @media (max-width:565px) {
+                font-size: .5rem;
+            }
+        }
+    }
+
+}

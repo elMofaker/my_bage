@@ -1,0 +1,54 @@
+@use '../helpers/variable' as *;
+
+.skills {
+    margin: 200px 0;
+
+    .container {
+        .row {
+
+            .con {
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                padding: 0.7rem 1.3rem;
+                border-radius: 0.5rem;
+                box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                font-weight: 500;
+
+                div:nth-child(2) {
+                    img {
+                        height: 100%;
+                        width: 20%;
+                    }
+                }
+
+                div:nth-child(1) {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .icon {
+                    color: $color-blue;
+                    font-size: 1.6rem;
+
+                }
+            }
+
+            .skills-width {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background-color: $color-blue;
+                height: 0.25rem;
+                border-radius: 0.5rem;
+                z-index: -1;
+                transition: width 0.5s ease;
+            }
+
+        }
+    }
+}
