@@ -1,5 +1,6 @@
 @use '../components/buttons';
 @use '../helpers/variable' as *;
+@use '../helpers/anim' as *;
 
 .home {
     display: block;
@@ -42,6 +43,7 @@
         }
 
         div:nth-child(2) {
+
             display: flex;
 
             @media (max-width:575px) {
@@ -62,8 +64,9 @@
 
             svg {
                 fill: $color-blue;
-
+                
                 g {
+                    animation: img-home 8s ease-in-out infinite alternate;
                     position: relative;
                     display: flex;
                     justify-content: center;

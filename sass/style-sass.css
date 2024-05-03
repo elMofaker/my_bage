@@ -114,6 +114,17 @@
     transform: scale(0) translateY(50px);
   }
 }
+@keyframes img-home {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(15px);
+  }
+}
 nav {
   z-index: 1;
   width: 100%;
@@ -276,6 +287,7 @@ footer svg path:nth-child(7) {
   fill: hsl(224, 89%, 60%);
 }
 .home .container div:nth-child(2) svg g {
+  animation: img-home 8s ease-in-out infinite alternate;
   position: relative;
   display: flex;
   justify-content: center;
