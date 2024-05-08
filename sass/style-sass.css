@@ -247,6 +247,14 @@ footer svg path:nth-child(7) {
   animation: line-anim 2s ease forwards 2ms;
 }
 
+.settings-box {
+  position: fixed;
+  z-index: 1000;
+  height: 100vh;
+  width: 200px;
+  background: aquamarine;
+}
+
 .home {
   display: block;
   width: 100%;
@@ -334,7 +342,7 @@ footer svg path:nth-child(7) {
   fill: hsl(224, 89%, 60%);
 }
 .home .container div:nth-child(2) svg g {
-  animation: img-home 8s ease-in-out infinite alternate;
+  animation: img-home 8s 0s ease infinite alternate;
   position: relative;
   display: flex;
   justify-content: center;

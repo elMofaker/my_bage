@@ -8,6 +8,7 @@
 @use '../sass/layout/header';
 @use '../sass/layout/footer';
 // pages
+@use '../sass/pages/settings_box';
 @use '../sass/pages/home';
 @use '../sass/pages/about';
 @use '../sass/pages/skills';
@@ -16,5 +17,4 @@
 
 body{
     font-family: "Poppins", sans-serif;;
-    
 }

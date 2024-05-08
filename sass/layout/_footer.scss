@@ -3,9 +3,10 @@
 
 footer{
     padding: 4rem 0 9rem 0;
-    color: #fff;
+    color: $color-white;
     text-align: center;
     background-color:  $color-black;
+
     svg {
         path:nth-child(1) {
             stroke-dasharray: 106;
