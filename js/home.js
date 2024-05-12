@@ -5,7 +5,6 @@
 // }
 
 let countersActivated = false;
-
 function runCodeOnScroll() {
   const sectionTop = document.getElementById("skills").offsetTop;
   const triggerOffset = 200;
@@ -17,10 +16,10 @@ function runCodeOnScroll() {
 
     // html
     let count6 = 0;
-    const interval6 = setInterval(() => {
+    let interval6 = setInterval(() => {
       count6++;
       document.getElementById("number-html").textContent = count6 + "%";
-      const htmlElements = document.getElementsByClassName("bar-html");
+      let htmlElements = document.getElementsByClassName("bar-html");
       htmlElements[0].style.width = count6 + "%";
       if (count6 === 99) {
         clearInterval(interval6);
@@ -98,3 +97,16 @@ runCodeOnScroll();
 window.addEventListener("scroll", () => {
   runCodeOnScroll();
 });
+
+
+// scroll trans
+ScrollReveal({ 
+  // reset: true,
+  distance: '60px',
+  duration: 2500,
+  delay: 400
+});
+
+ScrollReveal().reveal('.name', { delay: 300, origin: 'left'});
+ScrollReveal().reveal('.right', { delay: 300, origin: 'right'});
+ScrollReveal().reveal('.top', { delay: 300, origin: 'top', interval: 100});
