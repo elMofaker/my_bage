@@ -120,10 +120,10 @@
 }
 @keyframes navborder {
   0% {
-    transform: scale(1) translateY(0);
+    transform: scale(0) translateY(40px);
   }
   100% {
-    transform: scale(0) translateY(50px);
+    transform: scale(1) translateY(0);
   }
 }
 @keyframes img-home {
@@ -140,18 +140,8 @@
 nav {
   z-index: 1;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.8392156863);
+  background-color: rgba(255, 255, 255, 0.97);
   box-shadow: 0 0 6px -5px black;
-}
-nav::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  filter: blur(5px);
-  top: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.231372549);
 }
 nav .icon-bargar {
   border: none;
@@ -165,6 +155,19 @@ nav .con {
   align-items: center;
   gap: 1rem;
 }
+nav a {
+  padding-right: 5px;
+  padding-left: 5px;
+  color: black;
+  text-decoration: none;
+}
+nav a:hover ::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: black;
+}
 @media (min-width: 992px) {
   nav .icon {
     display: none;
@@ -172,17 +175,6 @@ nav .con {
 }
 nav .non:focus {
   box-shadow: none;
-}
-nav .activelink {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  border-bottom: 2px solid rgb(28, 35, 224);
-  border-radius: 15px;
-  transition: 0.5s;
-  color: rgb(28, 35, 224);
-  animation: navborder 2s forwards;
 }
 nav svg path:nth-child(1) {
   stroke-dasharray: 71;
@@ -457,4 +449,5 @@ footer svg path:nth-child(7) {
 
 body {
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }/*# sourceMappingURL=style-sass.css.map */
