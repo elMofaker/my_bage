@@ -6,7 +6,7 @@
 nav {
     z-index: 1;
     width: 100%;
-    background-color: #ffffffb9;
+    background-color: #ffffffd6;
     box-shadow: 0 0 6px -5px black;
     &::after{
         content: "";
@@ -17,6 +17,7 @@ nav {
         top: 0;
         left: 0;
         background-color: #ffffff3b;
+        
     }
 
     .icon-bargar {
@@ -100,9 +101,6 @@ nav {
             stroke-dashoffset: 87;
             animation: line-anim 2s ease forwards 2ms;
         }
-    }
-    .scrolled {
-        background-color: black;
     }
 
 }

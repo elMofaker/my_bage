@@ -4,6 +4,21 @@
 //     console.log(`Letter ${i} length is ${logo[i].getTotalLength()}`);
 // }
 
+
+// scroll trans
+ScrollReveal({ 
+  // reset: true,
+  distance: '60px',
+  duration: 2000,
+  delay: 400
+});
+
+ScrollReveal().reveal('.name', { delay: 250, origin: 'left', interval: 200});
+ScrollReveal().reveal('.right', { delay: 250, origin: 'right'});
+ScrollReveal().reveal('.top', { delay: 250, origin: 'top', interval: 100});
+
+// scroll
+
 let countersActivated = false;
 function runCodeOnScroll() {
   const sectionTop = document.getElementById("skills").offsetTop;
@@ -24,7 +39,7 @@ function runCodeOnScroll() {
       if (count6 === 99) {
         clearInterval(interval6);
       }
-    }, 20);
+    }, 24);
 
     // css
     let count5 = 0;
@@ -36,7 +51,7 @@ function runCodeOnScroll() {
       if (count5 === 99) {
         clearInterval(interval5);
       }
-    }, 22);
+    }, 25);
 
     // sass
     let count1 = 0;
@@ -49,7 +64,7 @@ function runCodeOnScroll() {
       if (count1 === 97) {
         clearInterval(interval1);
       }
-    }, 24);
+    }, 26);
 
     // bootstrap
     let count3 = 0;
@@ -62,7 +77,7 @@ function runCodeOnScroll() {
       if (count3 === 98) {
         clearInterval(interval3);
       }
-    }, 26);
+    }, 27);
 
     // js
     let count4 = 0;
@@ -98,15 +113,3 @@ window.addEventListener("scroll", () => {
   runCodeOnScroll();
 });
 
-
-// scroll trans
-ScrollReveal({ 
-  // reset: true,
-  distance: '60px',
-  duration: 2500,
-  delay: 400
-});
-
-ScrollReveal().reveal('.name', { delay: 300, origin: 'left'});
-ScrollReveal().reveal('.right', { delay: 300, origin: 'right'});
-ScrollReveal().reveal('.top', { delay: 300, origin: 'top', interval: 100});

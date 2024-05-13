@@ -17,6 +17,11 @@
   width: 11rem;
   border-radius: 24px;
 }
+@media (max-width: 767px) and (min-width: 576px) {
+  .btn-cssbuttons {
+    width: 9rem;
+  }
+}
 
 .btn-cssbuttons::before {
   position: absolute;
@@ -135,7 +140,7 @@
 nav {
   z-index: 1;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.7254901961);
+  background-color: rgba(255, 255, 255, 0.8392156863);
   box-shadow: 0 0 6px -5px black;
 }
 nav::after {
@@ -213,9 +218,6 @@ nav svg path:nth-child(7) {
   stroke-dasharray: 87;
   stroke-dashoffset: 87;
   animation: line-anim 2s ease forwards 2ms;
-}
-nav .scrolled {
-  background-color: black;
 }
 
 footer {
@@ -328,10 +330,8 @@ footer svg path:nth-child(7) {
     font-size: 2.9rem;
   }
 }
-.home .container div:nth-child(1) {
-  align-self: center;
-}
 .home .container div:nth-child(2) {
+  align-self: end;
   display: flex;
 }
 @media (max-width: 575px) {
