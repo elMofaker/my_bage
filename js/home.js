@@ -8,9 +8,9 @@
 // scroll trans
 ScrollReveal({ 
   // reset: true,
-  distance: '60px',
-  duration: 2000,
-  delay: 400
+  distance: '80px',
+  duration: 1400,
+  //delay: 400
 });
 
 ScrollReveal().reveal('.name', { delay: 250, origin: 'left', interval: 200});
