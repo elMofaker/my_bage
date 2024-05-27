@@ -7,6 +7,7 @@
 // layout
 @use '../sass/layout/header';
 @use '../sass/layout/footer';
+@use '../sass/layout/loader';
 // pages
 @use '../sass/pages/settings_box';
 @use '../sass/pages/home';
@@ -19,4 +20,28 @@ body{
     font-family: "Poppins", sans-serif;;
     overflow-x: hidden;
     box-sizing: border-box;
+    .scrolled{
+        box-shadow: 0 1px 18px -10px black;
+        transition: .5s;
+    }
+    .content {
+        .hidden {
+            display: none;
+        }
+    
+    }
+    .fade-in {
+        animation: fadeIn 1s ease-in-out forwards;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+    
+        to {
+            opacity: 1;
+        }
+    }
+
 }

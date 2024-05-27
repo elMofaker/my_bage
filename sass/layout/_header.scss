@@ -7,8 +7,7 @@ nav {
     z-index: 1;
     width: 100%;
     background-color: rgb(255 255 255 / 97%);
-    box-shadow: 0 0 6px -5px black;
-
+    transition: .5s;
     .icon-bargar {
         border: none;
 
@@ -37,8 +36,6 @@ nav {
             box-shadow: none;
         }
     }
-
-
 
     svg {
         path:nth-child(1) {
@@ -84,4 +81,3 @@ nav {
         }
     }
 
-}

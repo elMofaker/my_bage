@@ -4,21 +4,34 @@
 //     console.log(`Letter ${i} length is ${logo[i].getTotalLength()}`);
 // }
 
+// scroll nav
+window.addEventListener('scroll', function() {
+  var navbar = document.getElementById('navbar');
+  if (window.scrollY > 1) {
+      navbar.classList.add('scrolled');
+  } else {
+      navbar.classList.remove('scrolled');
+  }
+});
+
+// icon loading
+$(window).on("load", function () {
+  $(".content").removeClass('hidden').addClass('fade-in').fadeIn(1000);
+  $(".loader").fadeOut(3000, function () { 
+  });
+});
 
 // scroll trans
 ScrollReveal({ 
-  // reset: true,
   distance: '80px',
   duration: 1400,
-  //delay: 400
 });
 
 ScrollReveal().reveal('.name', { delay: 250, origin: 'left', interval: 200});
 ScrollReveal().reveal('.right', { delay: 250, origin: 'right'});
 ScrollReveal().reveal('.top', { delay: 250, origin: 'top', interval: 100});
 
-// scroll
-
+// scroll skills
 let countersActivated = false;
 function runCodeOnScroll() {
   const sectionTop = document.getElementById("skills").offsetTop;

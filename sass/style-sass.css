@@ -141,7 +141,7 @@ nav {
   z-index: 1;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.97);
-  box-shadow: 0 0 6px -5px black;
+  transition: 0.5s;
 }
 nav .icon-bargar {
   border: none;
@@ -155,58 +155,48 @@ nav .con {
   align-items: center;
   gap: 1rem;
 }
-nav a {
-  padding-right: 5px;
-  padding-left: 5px;
-  color: black;
-  text-decoration: none;
-}
-nav a:hover ::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: black;
-}
+
 @media (min-width: 992px) {
-  nav .icon {
+  .icon {
     display: none;
   }
 }
-nav .non:focus {
+
+.non:focus {
   box-shadow: none;
 }
-nav svg path:nth-child(1) {
+
+svg path:nth-child(1) {
   stroke-dasharray: 71;
   stroke-dashoffset: 71;
   animation: line-anim 2s ease forwards 0.3ms;
 }
-nav svg path:nth-child(2) {
+svg path:nth-child(2) {
   stroke-dasharray: 68;
   stroke-dashoffset: 68;
   animation: line-anim 2s ease forwards 0.6ms;
 }
-nav svg path:nth-child(3) {
+svg path:nth-child(3) {
   stroke-dasharray: 67;
   stroke-dashoffset: 67;
   animation: line-anim 2s ease forwards 0.9ms;
 }
-nav svg path:nth-child(4) {
+svg path:nth-child(4) {
   stroke-dasharray: 67;
   stroke-dashoffset: 67;
   animation: line-anim 2s ease forwards 1.1ms;
 }
-nav svg path:nth-child(5) {
+svg path:nth-child(5) {
   stroke-dasharray: 66;
   stroke-dashoffset: 66;
   animation: line-anim 2s ease forwards 1.4ms;
 }
-nav svg path:nth-child(6) {
+svg path:nth-child(6) {
   stroke-dasharray: 78;
   stroke-dashoffset: 78;
   animation: line-anim 2s ease forwards 1.7ms;
 }
-nav svg path:nth-child(7) {
+svg path:nth-child(7) {
   stroke-dasharray: 87;
   stroke-dashoffset: 87;
   animation: line-anim 2s ease forwards 2ms;
@@ -252,6 +242,28 @@ footer svg path:nth-child(7) {
   stroke-dasharray: 129;
   stroke-dashoffset: 129;
   animation: line-anim 2s ease forwards 2ms;
+}
+
+.loader {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: black;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1111;
+}
+.loader svg path:nth-child(1) {
+  stroke-dasharray: 595;
+  stroke-dashoffset: 595;
+  animation: line-anim 2s ease forwards 1.7ms;
+}
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
 }
 
 .settings-box {
@@ -360,12 +372,16 @@ footer svg path:nth-child(7) {
   y: 69;
 }
 
+.about {
+  box-shadow: 0px 0 25px -18px black;
+}
 .about .row {
   align-items: center;
   text-align: initial;
 }
 .about .row img {
   width: 75%;
+  box-shadow: 0px 0 23px -15px black;
 }
 .about .row h2 {
   font-weight: bold;
@@ -377,6 +393,10 @@ footer svg path:nth-child(7) {
 
 .skills {
   margin: 200px 0;
+}
+.skills .container .row img {
+  box-shadow: 0px 0 23px -15px black;
+  border-radius: 30px;
 }
 .skills .container .row .con {
   display: flex;
@@ -414,7 +434,7 @@ footer svg path:nth-child(7) {
 }
 
 .work {
-  margin: 200px 0;
+  box-shadow: 0px 0 25px -18px black;
 }
 .work .container .row {
   display: grid;
@@ -436,9 +456,9 @@ footer svg path:nth-child(7) {
 }
 .work .container .row .col {
   padding: 0;
-  box-shadow: 0px 0 20px -8px rgba(14, 36, 49, 0.386);
   border-radius: 0.5rem;
   overflow: hidden;
+  box-shadow: 0px 0 23px -15px black;
 }
 .work .container .row .col img {
   transition: 1s;
@@ -450,4 +470,23 @@ footer svg path:nth-child(7) {
 body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  box-sizing: border-box;
+}
+body .scrolled {
+  box-shadow: 0 1px 18px -10px black;
+  transition: 0.5s;
+}
+body .content .hidden {
+  display: none;
+}
+body .fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=style-sass.css.map */
