@@ -23,8 +23,15 @@ $(window).on("load", function () {
 
 // scroll trans
 ScrollReveal({ 
+<<<<<<< Updated upstream
   distance: '80px',
   duration: 1400,
+=======
+  // reset: true,
+  distance: '80px',
+  duration: 1400,
+  // delay: 100
+>>>>>>> Stashed changes
 });
 
 ScrollReveal().reveal('.name', { delay: 250, origin: 'left', interval: 200});
