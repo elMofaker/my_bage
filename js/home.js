@@ -1,4 +1,4 @@
-// const logo = document.querySelectorAll("#svg-about path");
+// const logo = document.querySelectorAll("#logo path");
 
 // for (let i = 0; i < logo.length; i++) {
 //     console.log(`Letter ${i} length is ${logo[i].getTotalLength()}`);
@@ -16,8 +16,8 @@ window.addEventListener('scroll', function() {
 
 // icon loading
 $(window).on("load", function () {
-  $(".content").removeClass('hidden').addClass('fade-in').fadeIn(1000);
-  $(".loader").fadeOut(3000, function () { 
+  $(".content").removeClass('hidden').addClass('fade-in').fadeIn(4000);
+  $(".loader").fadeOut(4000, function () { 
   });
 });
 

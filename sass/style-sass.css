@@ -16,6 +16,9 @@
   transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
   width: 11rem;
   border-radius: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 @media (max-width: 767px) and (min-width: 576px) {
   .btn-cssbuttons {
@@ -256,8 +259,38 @@ footer svg path:nth-child(7) {
   z-index: 1111;
 }
 .loader svg path:nth-child(1) {
-  stroke-dasharray: 595;
-  stroke-dashoffset: 595;
+  stroke-dasharray: 723;
+  stroke-dashoffset: 723;
+  animation: line-anim 2s ease forwards 1.7ms;
+}
+.loader svg path:nth-child(2) {
+  stroke-dasharray: 673;
+  stroke-dashoffset: 673;
+  animation: line-anim 2s ease forwards 1.7ms;
+}
+.loader svg path:nth-child(3) {
+  stroke-dasharray: 614;
+  stroke-dashoffset: 614;
+  animation: line-anim 2s ease forwards 1.7ms;
+}
+.loader svg path:nth-child(4) {
+  stroke-dasharray: 614;
+  stroke-dashoffset: 614;
+  animation: line-anim 2s ease forwards 1.7ms;
+}
+.loader svg path:nth-child(5) {
+  stroke-dasharray: 791;
+  stroke-dashoffset: 791;
+  animation: line-anim 2s ease forwards 1.7ms;
+}
+.loader svg path:nth-child(6) {
+  stroke-dasharray: 989;
+  stroke-dashoffset: 989;
+  animation: line-anim 2s ease forwards 1.7ms;
+}
+.loader svg path:nth-child(7) {
+  stroke-dasharray: 801;
+  stroke-dashoffset: 801;
   animation: line-anim 2s ease forwards 1.7ms;
 }
 @keyframes line-anim {
