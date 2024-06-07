@@ -45,18 +45,105 @@
 
             span {
                 color: $color-blue;
+
                 @media (max-width:319px) {
                     font-size: 2rem;
                 }
-    
+
                 @media (min-width:320px) and (max-width:767px) {
                     font-size: 2rem;
                 }
-    
+
                 @media (max-width:992px) and (min-width:767px) {
                     font-size: 2.9rem;
                 }
             }
+        }
+
+        .text-skills {
+
+            // font-size: 2rem;
+            text-transform: capitalize;
+            // min-width: 28rem;
+            font-weight: 600;
+            position: relative;
+
+            &::before {
+                content: "web developer";
+                color: black;
+                animation: words 20s infinite;
+            }
+
+            &::after {
+                content: "";
+                background-color: rgb(255, 255, 255);
+                position: absolute;
+                width: calc(100% + 8px);
+                height: 70%;
+                border-left: 3px solid rgb(255, 255, 255);
+                right: -8px;
+                animation: cursor 2s infinite,
+                    typing 20s steps(14) infinite;
+            }
+
+            @keyframes cursor {
+                to {
+                    border-left: 2px solid rgb(0, 0, 0);
+                }
+            }
+
+            @keyframes words {
+
+                0%,
+                20% {
+                    content: "Frontend Developer";
+                }
+
+                21%,
+                40% {
+                    content: "Web Designer";
+                }
+
+                41%,
+                60% {
+                    content: "UI / UX Designer";
+                }
+
+                61%,
+                80% {
+                    content: "Web Developer";
+                }
+
+            }
+
+            @keyframes typing {
+
+                10%,
+                15%,
+                30%,
+                35%,
+                50%,
+                55%,
+                70%,
+                75%,
+                90%,
+                95% {
+                    width: 0;
+                }
+
+                5%,
+                20%,
+                25%,
+                40%,
+                45%,
+                60%,
+                65%,
+                80%,
+                85% {
+                    width: calc(100% + 8px);
+                }
+            }
+
         }
 
         div:nth-child(2) {
