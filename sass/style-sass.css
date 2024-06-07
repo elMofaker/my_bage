@@ -368,7 +368,7 @@ footer svg path:nth-child(7) {
   }
 }
 .home .container .text-skills {
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-transform: capitalize;
   font-weight: 600;
   position: relative;
@@ -380,12 +380,12 @@ footer svg path:nth-child(7) {
 }
 @media (min-width: 320px) and (max-width: 767px) {
   .home .container .text-skills {
-    font-size: 1.1rem;
+    font-size: 1.6rem;
   }
 }
 @media (max-width: 992px) and (min-width: 767px) {
   .home .container .text-skills {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
   }
 }
 .home .container .text-skills::before {
