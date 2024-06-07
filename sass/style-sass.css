@@ -310,13 +310,13 @@ footer svg path:nth-child(7) {
 .home {
   display: block;
   width: 100%;
-  height: 100vh;
+  height: 110vh;
 }
 .home .container {
   display: flex;
   align-items: center;
   width: 100%;
-  height: calc(100% + 60px);
+  height: 100%;
 }
 .home .container .row {
   width: 100%;
@@ -368,9 +368,25 @@ footer svg path:nth-child(7) {
   }
 }
 .home .container .text-skills {
+  font-size: 1.8rem;
   text-transform: capitalize;
   font-weight: 600;
   position: relative;
+}
+@media (max-width: 319px) {
+  .home .container .text-skills {
+    font-size: 1.6rem;
+  }
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .home .container .text-skills {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 992px) and (min-width: 767px) {
+  .home .container .text-skills {
+    font-size: 1.2rem;
+  }
 }
 .home .container .text-skills::before {
   content: "web developer";
@@ -382,7 +398,7 @@ footer svg path:nth-child(7) {
   background-color: rgb(255, 255, 255);
   position: absolute;
   width: calc(100% + 8px);
-  height: 70%;
+  height: 75%;
   border-left: 3px solid rgb(255, 255, 255);
   right: -8px;
   animation: cursor 2s infinite, typing 20s steps(14) infinite;
