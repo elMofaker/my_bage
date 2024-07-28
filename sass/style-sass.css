@@ -433,26 +433,16 @@ footer svg path:nth-child(7) {
 .home .container div:nth-child(2) {
   align-self: end;
   display: flex;
-}
-@media (max-width: 575px) {
-  .home .container div:nth-child(2) {
-    width: 75%;
-  }
-}
-@media (min-width: 767px) and (max-width: 992px) {
-  .home .container div:nth-child(2) {
-    width: 50%;
-    margin-top: -100px;
-  }
-}
-@media (min-width: 576px) and (max-width: 766px) {
-  .home .container div:nth-child(2) {
-    width: 50%;
-    margin-top: -350px;
-  }
+  width: 50%;
 }
 .home .container div:nth-child(2) svg {
   fill: hsl(224, 89%, 60%);
+  width: 70%;
+}
+@media (max-width: 767px) {
+  .home .container div:nth-child(2) svg {
+    width: 100%;
+  }
 }
 .home .container div:nth-child(2) svg g {
   animation: img-home 8s 0s ease infinite alternate;
@@ -476,7 +466,7 @@ footer svg path:nth-child(7) {
   text-align: initial;
 }
 .about .row img {
-  width: 75%;
+  width: 40%;
   box-shadow: 0px 0 23px -15px black;
 }
 .about .row h2 {

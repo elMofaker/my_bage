@@ -5,31 +5,30 @@
 // }
 
 // scroll nav
-window.addEventListener('scroll', function() {
-  var navbar = document.getElementById('navbar');
+window.addEventListener("scroll", function () {
+  var navbar = document.getElementById("navbar");
   if (window.scrollY > 1) {
-      navbar.classList.add('scrolled');
+    navbar.classList.add("scrolled");
   } else {
-      navbar.classList.remove('scrolled');
+    navbar.classList.remove("scrolled");
   }
 });
 
 // icon loading
 $(window).on("load", function () {
-  $(".content").removeClass('hidden').addClass('fade-in').fadeIn(4000);
-  $(".loader").fadeOut(4000, function () { 
-  });
+  $(".content").removeClass("hidden").addClass("fade-in").fadeIn(4000);
+  $(".loader").fadeOut(4000, function () {});
 });
 
 // scroll trans
-ScrollReveal({ 
-  distance: '80px',
+ScrollReveal({
+  distance: "80px",
   duration: 1400,
 });
 
-ScrollReveal().reveal('.name', { delay: 250, origin: 'left', interval: 200});
-ScrollReveal().reveal('.right', { delay: 250, origin: 'right'});
-ScrollReveal().reveal('.top', { delay: 250, origin: 'top', interval: 100});
+ScrollReveal().reveal(".name", { delay: 250, origin: "left", interval: 200 });
+ScrollReveal().reveal(".right", { delay: 250, origin: "right" });
+ScrollReveal().reveal(".top", { delay: 250, origin: "top", interval: 100 });
 
 // scroll skills
 let countersActivated = false;
@@ -49,10 +48,22 @@ function runCodeOnScroll() {
       document.getElementById("number-html").textContent = count6 + "%";
       let htmlElements = document.getElementsByClassName("bar-html");
       htmlElements[0].style.width = count6 + "%";
-      if (count6 === 99) {
+      if (count6 === 100) {
         clearInterval(interval6);
       }
     }, 24);
+    
+    // react
+    let count7 = 0;
+    let interval7 = setInterval(() => {
+      count7++;
+      document.getElementById("number-react").textContent = count7 + "%";
+      let reactElements = document.getElementsByClassName("bar-react");
+      reactElements[0].style.width = count7 + "%";
+      if (count7 === 99) {
+        clearInterval(interval7);
+      }
+    }, 23);
 
     // css
     let count5 = 0;
@@ -125,4 +136,3 @@ runCodeOnScroll();
 window.addEventListener("scroll", () => {
   runCodeOnScroll();
 });
-

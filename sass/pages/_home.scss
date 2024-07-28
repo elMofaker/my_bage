@@ -65,6 +65,7 @@
             text-transform: capitalize;
             font-weight: 600;
             position: relative;
+
             @media (max-width:319px) {
                 font-size: 1.6rem;
             }
@@ -158,24 +159,15 @@
         div:nth-child(2) {
             align-self: end;
             display: flex;
-
-            @media (max-width:575px) {
-                width: 75%;
-
-            }
-
-            @media (min-width:767px) and (max-width:992px) {
-                width: 50%;
-                margin-top: -100px;
-            }
-
-            @media (min-width:576px) and (max-width:766px) {
-                width: 50%;
-                margin-top: -350px;
-            }
+            width: 50%;
 
             svg {
                 fill: $color-blue;
+                width: 70%;
+
+                @media (max-width:767px) {
+                    width: 100%;
+                }
 
                 g {
                     animation: img-home 8s 0s ease infinite alternate;
